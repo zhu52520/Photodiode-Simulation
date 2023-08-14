@@ -1,0 +1,35 @@
+go atlas
+
+mesh
+x.mesh loc = -15 spacing = 3
+x.mesh loc = 15 spacing = 3
+
+y.mesh loc = 0 spacing=0.2
+y.mesh loc = 7 spacing=0.2
+
+
+region num = 1 material = InP \
+	y.min = 0   y.max = 1   x.min = -15  x.max = 15
+region num = 2 material = InAlGaAs x.comp = 0.2 y.comp = 0.1 \
+	y.min = 1   y.max = 2  x.min = -15  x.max = 15
+region num = 3 material = InAlGaAs x.comp = 0.2 y.comp = 0.2 \
+	y.min = 2   y.max = 3  x.min = -15  x.max = 15
+region num = 4 material = InAlGaAs x.comp = 0.2 y.comp = 0.3 \
+	y.min = 3   y.max = 4  x.min = -15  x.max = 15
+region num = 5 material = InAlGaAs x.comp = 0.2 y.comp = 0.4 \
+	y.min = 4   y.max = 5  x.min = -15  x.max = 15
+region num = 6 material = InAlGaAs x.comp = 0.2 y.comp = 0.5 \
+	y.min = 5   y.max = 6  x.min = -15  x.max = 15
+
+region num = 10 material = InGaAs x.comp = 0.47 \
+	y.min = 6  y.max = 7  x.min = -15  x.max = 15
+
+electrode name = anode   top
+electrode name = cathode bottom
+
+solve init
+output CON.BAND VAL.BAND band.param
+
+#solve name=anode vdrain=0 vfinal=-30 vstep=-1
+save outf = bandgap.str
+tonyplot bandgap.str

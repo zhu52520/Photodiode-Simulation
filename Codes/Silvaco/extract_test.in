@@ -1,0 +1,4 @@
+extract init inf="A_n17_1e+018.str"
+extract name="vmax" 1d.max.conc impurity="E Field" x.val=0
+extract name="v_fringe" 1d.max.conc impurity="E Field" y.val=1.782
+save outf="test.log"

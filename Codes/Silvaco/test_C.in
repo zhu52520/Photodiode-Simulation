@@ -1,0 +1,413 @@
+go atlas
+
+mesh
+# axis x
+x.mesh loc = -40 spacing = 2
+x.mesh loc = -36.25 spacing = 1
+x.mesh loc = -32.5 spacing = 1
+x.mesh loc = -30 spacing = 1
+x.mesh loc = -26.25 spacing = 1
+x.mesh loc = -22.5 spacing = 1
+x.mesh loc = -18.75 spacing = 1
+x.mesh loc = -15 spacing = 1
+x.mesh loc = -11 spacing = 1
+
+x.mesh loc = 11 spacing = 1
+x.mesh loc = 15 spacing = 1
+x.mesh loc = 18.75 spacing = 1
+x.mesh loc = 22.5 spacing = 1
+x.mesh loc = 26.25 spacing = 1
+x.mesh loc = 30 spacing = 1
+x.mesh loc = 32.5 spacing = 1
+x.mesh loc = 36.25 spacing = 1
+x.mesh loc = 40 spacing = 2
+
+# axis y
+# layer 1
+y.mesh loc = 0 spacing = 0.01
+y.mesh loc = 0.075 spacing = 0.01
+y.mesh loc = 0.15 spacing = 0.001
+# layer 2
+y.mesh loc = 0.15 spacing = 0.01
+y.mesh loc = 0.4 spacing = 0.01
+y.mesh loc = 0.65 spacing = 0.001
+# layer 3-6
+y.mesh loc = 0.65 spacing = 0.001
+y.mesh loc = 0.656 spacing = 0.0001
+y.mesh loc = 0.662 spacing = 0.0001
+# layer 7
+y.mesh loc = 0.662 spacing = 0.01
+y.mesh loc = 0.877 spacing = 0.01
+y.mesh loc = 1.092 spacing = 0.001
+# layer 8
+y.mesh loc = 1.092 spacing = 0.01
+y.mesh loc = 1.277 spacing = 0.01
+y.mesh loc = 1.462 spacing = 0.001
+# layer 9-12
+y.mesh loc = 1.462 spacing = 0.001
+y.mesh loc = 1.468 spacing = 0.001
+y.mesh loc = 1.474 spacing = 0.001
+# layer 13
+y.mesh loc = 1.474 spacing = 0.001
+y.mesh loc = 1.489 spacing = 0.002
+y.mesh loc = 1.504 spacing = 0.001
+# layer 14
+y.mesh loc = 1.504 spacing = 0.001
+y.mesh loc = 1.534 spacing = 0.003
+y.mesh loc = 1.564 spacing = 0.001
+# layer 15
+y.mesh loc = 1.564 spacing = 0.001
+y.mesh loc = 1.579 spacing = 0.002
+y.mesh loc = 1.594 spacing = 0.001
+# layer 16
+y.mesh loc = 1.594 spacing = 0.001
+y.mesh loc = 1.638 spacing = 0.001
+y.mesh loc = 1.682 spacing = 0.001
+# layer 17
+y.mesh loc = 1.682 spacing = 0.01
+y.mesh loc = 1.782 spacing = 0.01
+y.mesh loc = 1.882 spacing = 0.001
+# layer 18
+y.mesh loc = 1.882 spacing = 0.01
+y.mesh loc = 2.382 spacing = 0.1
+y.mesh loc = 2.882 spacing = 0.001
+# layer 19
+y.mesh loc = 2.882 spacing = 0.001
+y.mesh loc = 2.907 spacing = 0.002
+y.mesh loc = 2.932 spacing = 0.001
+
+
+# material
+region num = 1 material = InGaAs \
+	x.comp = 0.53  y.min = 0      y.max = 0.15   x.min = -15  x.max = 15
+region num = 2 material = InP \
+	y.min = 0.15   y.max = 0.65   x.min = -15  x.max = 15
+region num = 3 material = InAlGaAs x.comp = 0.2 y.comp = 0.500 \
+	y.min = 0.65   y.max = 0.653  x.min = -15  x.max = 15
+region num = 4 material = InAlGaAs x.comp = 0.2 y.comp = 0.367 \
+	y.min = 0.653   y.max = 0.656  x.min = -15  x.max = 15
+region num = 5 material = InAlGaAs x.comp = 0.2 y.comp = 0.234 \
+	y.min = 0.656   y.max = 0.659  x.min = -15  x.max = 15
+region num = 6 material = InAlGaAs x.comp = 0.2 y.comp = 0.100 \
+	y.min = 0.659   y.max = 0.662  x.min = -15  x.max = 15
+region num = 7 material = InGaAs x.comp = 0.47 \
+	y.min = 0.662  y.max = 1.092  x.min = -15  x.max = 15
+
+region num = 8 material = InGaAs x.comp = 0.47 \
+	y.min = 1.092  y.max = 1.462  x.min = -22.5  x.max = 22.5
+region num = 9 material = InAlGaAs x.comp = 0.2 y.comp = 0.100 \
+	y.min = 1.462   y.max = 1.465  x.min = -22.5  x.max = 22.5
+region num = 10 material = InAlGaAs x.comp = 0.2 y.comp = 0.234 \
+	y.min = 1.465   y.max = 1.468  x.min = -22.5  x.max = 22.5
+region num = 11 material = InAlGaAs x.comp = 0.2 y.comp = 0.367 \
+	y.min = 1.468   y.max = 1.471  x.min = -22.5  x.max = 22.5
+region num = 12 material = InAlGaAs x.comp = 0.2 y.comp = 0.500 \
+	y.min = 1.471   y.max = 1.474  x.min = -22.5  x.max = 22.5
+region num = 13 material = InAlAs x.comp = 0.52 \
+	y.min = 1.474  y.max = 1.504  x.min = -22.5  x.max = 22.5
+
+region num = 14 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.504  y.max = 1.564   x.min = -32.5  x.max = 32.5
+region num = 15 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.564  y.max = 1.594   x.min = -32.5  x.max = 32.5
+region num = 16 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.594  y.max = 1.682   x.min = -32.5  x.max = 32.5
+region num = 17 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.682  y.max = 1.882   x.min = -32.5  x.max = 32.5
+
+region num = 18  material = InP \
+	y.min = 1.882  y.max = 2.882  x.min = -40  x.max = 40
+region num = 19  material = InP \
+	y.min = 2.882  y.max = 2.932  x.min = -40  x.max = 40
+
+# air
+region num = 20  material = air  x.min = -22.5 x.max = -15   y.min = 0  y.max = 1.092
+region num = 21  material = air  x.min = 15    x.max = 22.5  y.min = 0  y.max = 1.092
+region num = 22  material = air  x.min = -32.5   x.max = -22.5 y.min = 0  y.max = 1.504  
+region num = 23  material = air  x.min = 22.5  x.max = 32.5    y.min = 0  y.max = 1.504 
+region num = 24  material = air  x.min = -40   x.max = -32.5 y.min = 0  y.max = 1.882 
+region num = 25  material = air  x.min = 32.5  x.max = 40   y.min = 0  y.max = 1.882 
+
+# electrode
+electrode name = anode   top
+electrode name = cathode x.min = -40  x.max = -32.5 y.min = 1.882 y.max = 1.882
+electrode name = cathode x.min = 32.5 x.max = 40    y.min = 1.882 y.max = 1.882
+
+set doping_p1 = 2e19
+set doping_p2 = 2e19
+set doping_p3 = 6e16
+
+set doping_p13 = 5e17
+set doping_p15 = 1.5e18
+
+set doping_n17 = 1e19
+set doping_n18 = 1e16
+
+set doping_i = 2e14
+
+# doping
+doping
+# P+
+doping uniform p.type concentration = $doping_p1 region = 1 
+# P+
+doping uniform p.type concentration = $doping_p2 region = 2
+# P-
+doping uniform p.type concentration = $doping_p3 region = 3
+doping uniform p.type concentration = $doping_p3 region = 4
+doping uniform p.type concentration = $doping_p3 region = 5
+doping uniform p.type concentration = $doping_p3 region = 6
+# P+ graded
+doping ascii infile=doping_of_region_5_exp p.type region = 7
+# I-
+doping uniform n.type concentration = $doping_i region = 8
+# I- graded
+doping uniform n.type concentration = $doping_i region = 9
+doping uniform n.type concentration = $doping_i region = 10
+doping uniform n.type concentration = $doping_i region = 11
+doping uniform n.type concentration = $doping_i region = 12
+# P- charge
+doping uniform p.type concentration = $doping_p13 region = 13
+# I-field buffer
+doping uniform p.type concentration = $doping_i region = 14
+# P+ charge
+doping uniform p.type concentration = $doping_p15 region = 15
+# I- Mul
+doping uniform p.type concentration = $doping_i region = 16
+# N-
+doping uniform n.type concentration = $doping_n17 region = 17
+# N-
+doping uniform n.type concentration = $doping_n18 region = 18
+# I- Buffer
+doping uniform n.type concentration = $doping_i region = 19
+
+# save outf = example.str
+# tonyplot example.str
+
+solve init
+output e.field CON.BAND VAL.BAND band.param
+solve vanode = -21 name = anode vcathod = 0
+#solve name=anode vdrain=0 vfinal=-30 vstep=-1
+save outf = test.str
+tonyplot test.str
+
+#save outf = A_p13_$'doping_p13'.str
+#tonyplot A_n17_$'doping_n17'.str
+
+#solve init
+#method newton
+#log outfile=test.log
+#solve vanode = -21 name = anode vcathod = 0
+#solve vanode=-21  vstep=-3  vfinal=-21  name=anode
+#tonyplot test.log
+#quit
+
+
+32.5处较接近
+
+test 2
+
+
+
+
+go atlas
+
+mesh
+# axis x
+x.mesh loc = -40 spacing = 2
+x.mesh loc = -36.25 spacing = 1
+x.mesh loc = -32.5 spacing = 1
+x.mesh loc = -30 spacing = 1
+x.mesh loc = -26.25 spacing = 1
+x.mesh loc = -22.5 spacing = 1
+x.mesh loc = -18.75 spacing = 1
+x.mesh loc = -15 spacing = 1
+x.mesh loc = -11 spacing = 1
+
+x.mesh loc = 11 spacing = 1
+x.mesh loc = 15 spacing = 1
+x.mesh loc = 18.75 spacing = 1
+x.mesh loc = 22.5 spacing = 1
+x.mesh loc = 26.25 spacing = 1
+x.mesh loc = 30 spacing = 1
+x.mesh loc = 32.5 spacing = 1
+x.mesh loc = 36.25 spacing = 1
+x.mesh loc = 40 spacing = 2
+
+# axis y
+# layer 1
+y.mesh loc = 0 spacing = 0.01
+y.mesh loc = 0.075 spacing = 0.01
+y.mesh loc = 0.15 spacing = 0.001
+# layer 2
+y.mesh loc = 0.15 spacing = 0.01
+y.mesh loc = 0.4 spacing = 0.01
+y.mesh loc = 0.65 spacing = 0.001
+# layer 3-6
+y.mesh loc = 0.65 spacing = 0.001
+y.mesh loc = 0.656 spacing = 0.0001
+y.mesh loc = 0.662 spacing = 0.0001
+# layer 7
+y.mesh loc = 0.662 spacing = 0.01
+y.mesh loc = 0.877 spacing = 0.01
+y.mesh loc = 1.092 spacing = 0.001
+# layer 8
+y.mesh loc = 1.092 spacing = 0.01
+y.mesh loc = 1.277 spacing = 0.01
+y.mesh loc = 1.462 spacing = 0.001
+# layer 9-12
+y.mesh loc = 1.462 spacing = 0.001
+y.mesh loc = 1.468 spacing = 0.001
+y.mesh loc = 1.474 spacing = 0.001
+# layer 13
+y.mesh loc = 1.474 spacing = 0.001
+y.mesh loc = 1.489 spacing = 0.002
+y.mesh loc = 1.504 spacing = 0.001
+# layer 14
+y.mesh loc = 1.504 spacing = 0.001
+y.mesh loc = 1.534 spacing = 0.003
+y.mesh loc = 1.564 spacing = 0.001
+# layer 15
+y.mesh loc = 1.564 spacing = 0.001
+y.mesh loc = 1.579 spacing = 0.002
+y.mesh loc = 1.594 spacing = 0.001
+# layer 16
+y.mesh loc = 1.594 spacing = 0.001
+y.mesh loc = 1.638 spacing = 0.001
+y.mesh loc = 1.682 spacing = 0.001
+# layer 17
+y.mesh loc = 1.682 spacing = 0.01
+y.mesh loc = 1.782 spacing = 0.01
+y.mesh loc = 1.882 spacing = 0.001
+# layer 18
+y.mesh loc = 1.882 spacing = 0.01
+y.mesh loc = 2.382 spacing = 0.1
+y.mesh loc = 2.882 spacing = 0.001
+# layer 19
+y.mesh loc = 2.882 spacing = 0.001
+y.mesh loc = 2.907 spacing = 0.002
+y.mesh loc = 2.932 spacing = 0.001
+
+
+# material
+region num = 1 material = InGaAs \
+	x.comp = 0.53  y.min = 0      y.max = 0.15   x.min = -15  x.max = 15
+region num = 2 material = InP \
+	y.min = 0.15   y.max = 0.65   x.min = -15  x.max = 15
+region num = 3 material = InAlGaAs x.comp = 0.2 y.comp = 0.500 \
+	y.min = 0.65   y.max = 0.653  x.min = -15  x.max = 15
+region num = 4 material = InAlGaAs x.comp = 0.2 y.comp = 0.367 \
+	y.min = 0.653   y.max = 0.656  x.min = -15  x.max = 15
+region num = 5 material = InAlGaAs x.comp = 0.2 y.comp = 0.234 \
+	y.min = 0.656   y.max = 0.659  x.min = -15  x.max = 15
+region num = 6 material = InAlGaAs x.comp = 0.2 y.comp = 0.100 \
+	y.min = 0.659   y.max = 0.662  x.min = -15  x.max = 15
+region num = 7 material = InGaAs x.comp = 0.47 \
+	y.min = 0.662  y.max = 1.092  x.min = -15  x.max = 15
+
+region num = 8 material = InGaAs x.comp = 0.47 \
+	y.min = 1.092  y.max = 1.462  x.min = -22.5  x.max = 22.5
+region num = 9 material = InAlGaAs x.comp = 0.2 y.comp = 0.100 \
+	y.min = 1.462   y.max = 1.465  x.min = -22.5  x.max = 22.5
+region num = 10 material = InAlGaAs x.comp = 0.2 y.comp = 0.234 \
+	y.min = 1.465   y.max = 1.468  x.min = -22.5  x.max = 22.5
+region num = 11 material = InAlGaAs x.comp = 0.2 y.comp = 0.367 \
+	y.min = 1.468   y.max = 1.471  x.min = -22.5  x.max = 22.5
+region num = 12 material = InAlGaAs x.comp = 0.2 y.comp = 0.500 \
+	y.min = 1.471   y.max = 1.474  x.min = -22.5  x.max = 22.5
+region num = 13 material = InAlAs x.comp = 0.52 \
+	y.min = 1.474  y.max = 1.504  x.min = -22.5  x.max = 22.5
+
+region num = 14 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.504  y.max = 1.564   x.min = -32.5  x.max = 32.5
+region num = 15 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.564  y.max = 1.594   x.min = -32.5  x.max = 32.5
+region num = 16 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.594  y.max = 1.682   x.min = -32.5  x.max = 32.5
+region num = 17 material = InAlAs  x.comp = 0.52 \
+	y.min = 1.682  y.max = 1.882   x.min = -32.5  x.max = 32.5
+
+region num = 18  material = InP \
+	y.min = 1.882  y.max = 2.882  x.min = -40  x.max = 40
+region num = 19  material = InP \
+	y.min = 2.882  y.max = 2.932  x.min = -40  x.max = 40
+
+# air
+region num = 20  material = air  x.min = -22.5 x.max = -15   y.min = 0  y.max = 1.092
+region num = 21  material = air  x.min = 15    x.max = 22.5  y.min = 0  y.max = 1.092
+region num = 22  material = air  x.min = -32.5   x.max = -22.5 y.min = 0  y.max = 1.504  
+region num = 23  material = air  x.min = 22.5  x.max = 32.5    y.min = 0  y.max = 1.504 
+region num = 24  material = air  x.min = -40   x.max = -32.5 y.min = 0  y.max = 1.882 
+region num = 25  material = air  x.min = 32.5  x.max = 40   y.min = 0  y.max = 1.882 
+
+# electrode
+electrode name = anode   top
+electrode name = cathode x.min = -40  x.max = -32.5 y.min = 1.882 y.max = 1.882
+electrode name = cathode x.min = 32.5 x.max = 40    y.min = 1.882 y.max = 1.882
+
+set doping_p1 = 2e19
+set doping_p2 = 2e19
+set doping_p3 = 6e16
+
+set doping_p13 = 5e17
+set doping_p15 = 1.5e18
+
+set doping_n17 = 1e19
+set doping_n18 = 1e16
+
+set doping_i = 2.4e14
+
+# doping
+doping
+# P+
+doping uniform p.type concentration = $doping_p1 region = 1 
+# P+
+doping uniform p.type concentration = $doping_p2 region = 2
+# P-
+doping uniform p.type concentration = $doping_p3 region = 3
+doping uniform p.type concentration = $doping_p3 region = 4
+doping uniform p.type concentration = $doping_p3 region = 5
+doping uniform p.type concentration = $doping_p3 region = 6
+# P+ graded
+doping ascii infile=doping_of_region_5_exp p.type region = 7
+# I-
+doping uniform n.type concentration = $doping_i region = 8
+# I- graded
+doping uniform n.type concentration = $doping_i region = 9
+doping uniform n.type concentration = $doping_i region = 10
+doping uniform n.type concentration = $doping_i region = 11
+doping uniform n.type concentration = $doping_i region = 12
+# P- charge
+doping uniform p.type concentration = $doping_p13 region = 13
+# I-field buffer
+doping uniform p.type concentration = $doping_i region = 14
+# P+ charge
+doping uniform p.type concentration = $doping_p15 region = 15
+# I- Mul
+doping uniform p.type concentration = $doping_i region = 16
+# N-
+doping uniform n.type concentration = $doping_n17 region = 17
+# N-
+doping uniform n.type concentration = $doping_n18 region = 18
+# I- Buffer
+doping uniform n.type concentration = $doping_i region = 19
+
+# save outf = example.str
+# tonyplot example.str
+
+solve init
+output e.field CON.BAND VAL.BAND band.param
+solve vanode = -21 name = anode vcathod = 0
+#solve name=anode vdrain=0 vfinal=-30 vstep=-1
+save outf = test_C.str
+tonyplot test_C.str
+
+#save outf = A_p13_$'doping_p13'.str
+#tonyplot A_n17_$'doping_n17'.str
+
+#solve init
+#method newton
+#log outfile=test.log
+#solve vanode = -21 name = anode vcathod = 0
+#solve vanode=-21  vstep=-3  vfinal=-21  name=anode
+#tonyplot test.log
+#quit

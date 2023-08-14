@@ -1,0 +1,7 @@
+go internal
+
+load inf = test_A.in
+
+sweep parameter = doping_i type=power range="1e11, 1e15, 5"
+
+quit
